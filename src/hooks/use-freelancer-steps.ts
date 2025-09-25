@@ -42,7 +42,7 @@ export function useFreelancerOnboarding(): UseFreelancerOnboardingReturn {
   const resetOnboarding = useCallback(() => {
     setCurrentStep(0)
     setUserData({
-      languages: [{ id: "1", name: "English", level: "Native or Bilingual" }],
+      languages: [{ id: '1', name: 'English', level: 'Native or Bilingual' }],
       skills: [],
       workExperience: [],
       education: [],

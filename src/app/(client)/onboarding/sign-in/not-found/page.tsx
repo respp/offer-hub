@@ -10,11 +10,11 @@ const SignInNotFoundContent: React.FC = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const rejectedEmail = searchParams.get("email") || "AdebayoDoe@yahoo.com";
+  const rejectedEmail = searchParams.get('email') || 'AdebayoDoe@yahoo.com';
   const [email, setEmail] = useState(rejectedEmail);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleRoleSelect = (role: "freelancer" | "client") => {
+  const handleRoleSelect = (role: 'freelancer' | 'client') => {
     setIsLoading(true);
     router.push(
       `/onboarding/sign-up?role=${role}&email=${encodeURIComponent(email)}`
@@ -22,21 +22,21 @@ const SignInNotFoundContent: React.FC = () => {
   };
 
   const handleSignIn = (
-    method: "apple" | "google" | "email",
+    method: 'apple' | 'google' | 'email',
     data?: { email: string; password?: string }
   ) => {
     setIsLoading(true);
 
     switch (method) {
-      case "apple":
-        console.log("Signing in with Apple");
+      case 'apple':
+        console.log('Signing in with Apple');
         break;
-      case "google":
-        console.log("Signing in with Google");
+      case 'google':
+        console.log('Signing in with Google');
         break;
-      case "email":
+      case 'email':
         if (data?.email) {
-          console.log("Attempting sign in with email:", data.email);
+          console.log('Attempting sign in with email:', data.email);
         }
         break;
     }

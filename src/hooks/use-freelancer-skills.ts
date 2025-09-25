@@ -45,7 +45,7 @@ export function useFreelancerSkills({ userData, updateUserData }: ProfileStepPro
   }
 
   const handleClearSearch = () => {
-    setSearchInput("")
+    setSearchInput('')
   }
 
   const isMaxSkillsReached = skills.length >= VALIDATION_LIMITS.MAX_SKILLS_PER_USER

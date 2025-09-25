@@ -1,5 +1,5 @@
 import React from 'react';
-import withErrorBoundary from "@/components/shared/WithErrorBoundary";
+import withErrorBoundary from '@/components/shared/WithErrorBoundary';
 import DisputesList from './DisputesList';
 import DisputesEmptyState from './DisputesEmptyState';
 import StartDisputeButton from './StartDisputeButton';

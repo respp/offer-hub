@@ -37,13 +37,13 @@ export type ReviewErrorResponse = {
 
 export type ReviewUpdateResponse = {
   success: true;
-  message: "Review_updated_successfully";
+  message: 'Review_updated_successfully';
   data: Review;
 };
 
 export type ReviewDeleteResponse = {
   success: true;
-  message: "Review_deleted_successfully";
+  message: 'Review_deleted_successfully';
   data: { id: string };
 };
 
