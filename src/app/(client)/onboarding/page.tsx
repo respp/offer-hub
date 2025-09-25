@@ -1,14 +1,14 @@
-"use client";
-import { useState, useEffect, Suspense } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
-import LandingPage from "@/components/client-onboarding/LandingPage";
-import ConnectWallet from "@/components/client-onboarding/ConnectWallet";
-import SignIn from "@/components/client-onboarding/SignIn";
-import SignInAccountNotFound from "@/components/client-onboarding/SignInAccountNotFound";
-import EnterPassword from "@/components/client-onboarding/EnterPassword";
-import RecoverPassword from "@/components/client-onboarding/RecoverPassword";
-import CheckEmail from "@/components/client-onboarding/CheckEmail";
-import ResetPassword from "@/components/client-onboarding/ResetPassword";
+'use client';
+import React, { useState, useEffect, Suspense } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import LandingPage from '@/components/client-onboarding/LandingPage';
+import ConnectWallet from '@/components/client-onboarding/ConnectWallet';
+import SignIn from '@/components/client-onboarding/SignIn';
+import SignInAccountNotFound from '@/components/client-onboarding/SignInAccountNotFound';
+import EnterPassword from '@/components/client-onboarding/EnterPassword';
+import RecoverPassword from '@/components/client-onboarding/RecoverPassword';
+import CheckEmail from '@/components/client-onboarding/CheckEmail';
+import ResetPassword from '@/components/client-onboarding/ResetPassword';
 
 export type OnboardingStep =
   | "landing"
@@ -191,19 +191,17 @@ const OnboardingContent = () => {
     }
   };
 
-  return <div className="min-h-screen bg-gray-50">{renderCurrentStep()}</div>;
+  return (
+    <div className='min-h-screen bg-gray-50'>
+      {renderCurrentStep()}
+    </div>
+  );
 };
 
 // Main component that wraps OnboardingContent in Suspense
 const OnboardingPage = () => {
   return (
-    <Suspense
-      fallback={
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-          Loading...
-        </div>
-      }
-    >
+    <Suspense fallback={<div className='min-h-screen bg-gray-50 flex items-center justify-center'>Loading...</div>}>
       <OnboardingContent />
     </Suspense>
   );
